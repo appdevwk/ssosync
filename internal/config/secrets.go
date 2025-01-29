@@ -20,50 +20,50 @@ func NewSecrets(svc *secretsmanager.SecretsManager) *Secrets {
 
 // GoogleAdminEmail ...
 func (s *Secrets) GoogleAdminEmail(secretArn string) (string, error) {
-     if len([]rune(secretArn)) == 0 {
-        return s.getSecret("SSOSyncGoogleAdminEmail")
-     } 
-     return s.getSecret(secretArn)
+	if len([]rune(secretArn)) == 0 {
+		return s.getSecret("SSOSyncGoogleAdminEmail")
+	}
+	return s.getSecret(secretArn)
 }
 
 // SCIMAccessToken ...
 func (s *Secrets) SCIMAccessToken(secretArn string) (string, error) {
-     if len([]rune(secretArn)) == 0 {
-        return s.getSecret("SSOSyncSCIMAccessToken")
-     }
-     return s.getSecret(secretArn)
+	if len([]rune(secretArn)) == 0 {
+		return s.getSecret("SSOSyncSCIMAccessToken")
+	}
+	return s.getSecret(secretArn)
 }
 
 // SCIMEndpointURL ...
 func (s *Secrets) SCIMEndpointURL(secretArn string) (string, error) {
-     if len([]rune(secretArn)) == 0 {
-        return s.getSecret("SSOSyncSCIMEndpointURL")
-     }
-     return s.getSecret(secretArn)
+	if len([]rune(secretArn)) == 0 {
+		return s.getSecret("SSOSyncSCIMEndpointURL")
+	}
+	return s.getSecret(secretArn)
 }
 
 // GoogleCredentials ...
 func (s *Secrets) GoogleCredentials(secretArn string) (string, error) {
-     if len([]rune(secretArn)) == 0 {
-        return s.getSecret("SSOSyncGoogleCredentials")
-     }
-     return s.getSecret(secretArn)
+	if len([]rune(secretArn)) == 0 {
+		return s.getSecret("SSOSyncGoogleCredentials")
+	}
+	return s.getSecret(secretArn)
 }
 
 // Region ...
 func (s *Secrets) Region(secretArn string) (string, error) {
-     if len([]rune(secretArn)) == 0 {
-        return s.getSecret("SSOSyncRegion")
-     }
-     return s.getSecret(secretArn)
+	if len([]rune(secretArn)) == 0 {
+		return s.getSecret("SSOSyncRegion")
+	}
+	return s.getSecret(secretArn)
 }
 
 // IdentityStoreID ...
 func (s *Secrets) IdentityStoreID(secretArn string) (string, error) {
-     if len([]rune(secretArn)) == 0 {
-        return s.getSecret("IdentityStoreID")
-     }
-     return s.getSecret(secretArn)
+	if len([]rune(secretArn)) == 0 {
+		return s.getSecret("IdentityStoreID")
+	}
+	return s.getSecret(secretArn)
 }
 
 func (s *Secrets) getSecret(secretKey string) (string, error) {
@@ -91,6 +91,3 @@ func (s *Secrets) getSecret(secretKey string) (string, error) {
 
 	return secretString, nil
 }
-
-
-

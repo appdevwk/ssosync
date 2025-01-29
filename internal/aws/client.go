@@ -29,11 +29,11 @@ import (
 
 var (
 	// ErrUserNotFound
-	ErrUserNotFound      = errors.New("user not found")
+	ErrUserNotFound = errors.New("user not found")
 	// ErrGroupNotFound
-	ErrGroupNotFound     = errors.New("group not found")
+	ErrGroupNotFound = errors.New("group not found")
 	// ErrUserNotSpecified
-	ErrUserNotSpecified  = errors.New("user not specified")
+	ErrUserNotSpecified = errors.New("user not specified")
 )
 
 // ErrHTTPNotOK
